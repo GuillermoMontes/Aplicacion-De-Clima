@@ -54,7 +54,7 @@ function App() {
           <h1 className="text-4xl my-3 text-slate-600">Clima App</h1>
           <div>
             <input
-              className="bg-white w-[75%] px-2 py-1 rounded-4xl my-2 border border-zinc-400"
+              className="bg-white w-[75%] px-4 py-1 rounded-4xl my-2 border border-zinc-400"
               onKeyDown={handleBusq}
               type="text"
               autoFocus
