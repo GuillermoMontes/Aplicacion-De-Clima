@@ -39,6 +39,7 @@ function App() {
   const handleBusq = (e) => {
     if (e.key === "Enter") {
       setBusq(e.target.value);
+      e.target.value = "";
     }
   };
 
@@ -64,7 +65,11 @@ function App() {
 
           <div>
             {dataApi ? (
-              <div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 <p className="text-xl">
                   {dataApi.name}, {dataApi.sys.country}
                 </p>
@@ -110,7 +115,7 @@ function App() {
                     <p>{dataApi.wind.speed} Km/h</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ) : (
               <h1 className="text-5xl m-10 ">Cargando..</h1>
             )}
